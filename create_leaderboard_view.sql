@@ -39,6 +39,7 @@ GROUP BY p.player_name, og.player_one_score, og.player_two_score
 )
 SELECT 
     player_name,
+    SUM(win) + SUM(loss) as games_played,
     SUM(points_for) as points_for,
     SUM(points_against) as points_against,
     SUM(win) as wins,
